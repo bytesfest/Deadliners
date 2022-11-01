@@ -1,0 +1,153 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ================ Fonts ==================== */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+@layer utilities {
+
+  .text-biggest {
+    @apply text-5xl;
+  }
+
+  .text-big {
+    @apply text-3xl;
+  }
+
+  .text-h1 {
+    @apply text-2xl;
+  }
+
+  .text-h2 {
+    @apply text-xl;
+  }
+
+  .text-h3 {
+    @apply text-lg;
+  }
+
+  .text-normal {
+    @apply text-base;
+  }
+
+  .text-small {
+    @apply text-sm;
+  }
+
+  .text-smallest {
+    @apply text-xs;
+  }
+
+  @media screen and (min-width: 968px) {
+    .text-biggest {
+      @apply text-7xl;
+    }
+
+    .text-big {
+      @apply text-4xl;
+    }
+
+    .text-h1 {
+      @apply text-4xl;
+    }
+
+    .text-h2 {
+      @apply text-2xl;
+    }
+
+    .text-h3 {
+      @apply text-xl;
+    }
+
+    .text-normal {
+      @apply text-lg;
+    }
+
+    .text-small {
+      @apply text-base;
+    }
+
+    .text-smallest {
+      @apply text-sm;
+    }
+  }
+
+  /* ==================== Reuse Components ================= */
+  .base-background {
+    @apply from-primaryDark to-secondaryDark via-[#191919];
+  }
+
+  .neu-flat{
+    box-shadow:  13px 13px 25px #0f0f0f, -13px -13px 25px #1d1d1d;
+  }
+
+  .neu-convex{
+    box-shadow:  36px 36px 71px #0f0f0f, -36px -36px 71px #232323;
+    background: linear-gradient(145deg, #1b1b1b, #171717);
+  }
+
+  .neu-press {
+    box-shadow: inset 36px 36px 71px #0f0f0f, inset -36px -36px 71px #232323;
+  }
+
+  .layout {
+    @apply w-[90%] mx-auto max-w-[1300px] text-white font-poppins;
+  }
+
+  .title__container {
+    @apply w-full flex flex-col text-center items-center justify-center;
+  }
+
+  .sub__title {
+    @apply text-primary font-semibold md:text-lg lg:text-xl
+  }
+
+  .title {
+    @apply font-sendFlower text-3xl md:text-4xl lg:text-5xl
+  }
+
+  .service__card:hover{
+    box-shadow:  13px 13px 25px #0f0f0f, -13px -13px 25px #1d1d1d;
+    @apply duration-500 transition-all ease-out
+  }
+
+  /* ======================== Learn Section ===================== */
+  .learn__background {
+    background: linear-gradient(to bottom, rgba(27, 27, 27, 0.8), rgba(27, 27, 27, 0.8), rgba(22, 22, 22, 0.85)),
+      url(../src/assets/learnMore.jpg) top center no-repeat;
+    background-size: cover;
+  }
+
+  .nav__link{
+    @apply hover:text-primary duration-300 ease-out
+  }
+
+  .explore__button::after{
+    content: "";
+    @apply bg-primary absolute bottom-0 right-0 w-full h-[3px] z-[-1] transition-all duration-300 ease-in-out;
+  }
+
+  /* ========================== Footer Section ===================== */
+  .form__input{
+    @apply bg-transparent focus:outline-none placeholder:text-lg placeholder:font-light placeholder:text-slate-200 py-2 border-b-2 border-gray-600 focus:border-primary
+  }
+
+  .footer__title{
+    @apply text-lg text-slate-200 mb-4
+  }
+
+  .footer__text{
+    @apply text-sm text-shade py-1 transition-all duration-300 ease-in-out 
+  }
+
+  .footer__link{
+    @apply text-sm text-shade py-1 cursor-pointer transition-all duration-300 ease-in-out 
+  }
+
+  .footer__link:hover{
+    -webkit-text-stroke: 0.05rem #fff;
+    transform: scale(1.1);
+    color: #fff;
+  }
+}
