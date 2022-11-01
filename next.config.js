@@ -7,6 +7,7 @@ const nextConfig = {
 	path: "",
   },
   basePath: "/Deadliners",
+  assetPrefix: "/",
 }
 
 module.exports = nextConfig
